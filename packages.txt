@@ -1,0 +1,43 @@
+Okay, here's my thoughts on a package system...
+
+Requirements:
+
+Source shouldn't be stored as files, but should be checked into a database.
+The database should be organized into packages, which may or may not be
+nested, but should be able to use code from other packages.  They may not be
+nested so much as categorized; public, private, local, etc.
+
+Source MUST be easily importable and exportable as plain-text files.  A
+text-editor plugin can simply run the export command, edit the resulting file,
+then check it back in.
+
+There must be both a library API and a command-line program, and possibly a
+graphical code browser.
+
+Installing and uninstalling packages must be easy and clean.  Distributing
+packages has to be feasable.
+
+It'd be nice to store source as a syntax-tree and pretty-print it
+consistantly upon exporting to a file.
+
+Specification:
+A package is a big whack of source code stored in a file in some kind of
+non-text form (pre-parsed syntax tree, probably).  
+
+A package should be made up of segments, each segment being... well.  Either a
+single unit of code (type decl, function, etc) and associated comments, or a
+pretty much arbitrary chunk of any amount of code, just for organization
+purposes.  A package would be an entire library or application or such, while
+a segment is smaller, more managable, and easier to handle.  They will
+probably be named.  When an entire package is dumped to files, the segments
+may dump to separate files, or may all be stuck together into one, with
+commented delimiters marking where to break them back up again.
+
+Packages also have categories.  A category is just a label that can be
+assigned to the package; a set.  These categories are just there to help
+organize.
+
+
+
+
+This might actually be usable for languages/apps other than Mayhem... hmmm.

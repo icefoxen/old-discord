@@ -1,0 +1,4 @@
+Handle overlap of package and segment names, multiple labels, stuff like that.
+
+Make UI more better; there should be one command to create a new package and
+import a list of segments into it.

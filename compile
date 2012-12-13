@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+FILES="discord.ml discordmain.ml"
+
+OCAMLC=ocamlc.opt
+OCAMLOPT=ocamlopt.opt
+
+#$OCAMLC -c -g $FILES
+$OCAMLOPT -c $FILES
+

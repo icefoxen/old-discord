@@ -1,0 +1,14 @@
+#!/bin/sh
+
+FILES="discord.cmo discordmain.cmo"
+OPTFILES="discord.cmx discordmain.cmx"
+
+LIBS="str.cma"
+OPTLIBS="str.cmxa"
+
+OCAMLLINK=ocamlc.opt
+OCAMLOPTLINK=ocamlopt.opt
+TARGET=discord
+
+#$OCAMLLINK -g -o $TARGET $LIBS $FILES
+$OCAMLOPTLINK -o $TARGET $OPTLIBS $OPTFILES
